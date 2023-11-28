@@ -25,7 +25,7 @@ Examples:
 
 ### Maximum odd sum
 
-Write a function that takes an array of numbers and returns the maximum sum of two numbers whose digits have an odd sum.
+Write a function that should find the highest possible sum of two numbers that, when added together, form an odd number.
 
 Assume that the array contains between 1 and 150 000 elements and that each element is within the range of 1 to 1 500 000.
 
