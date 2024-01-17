@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Credit Card";
+  src: local("Credit Card"), url("./kredit.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Credit Card Front";
+  src: local("Credit Card"), url("./kredit front.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

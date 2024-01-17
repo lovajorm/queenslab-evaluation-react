@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import CreditCard from "./credit-card/CreditCard";
 import { maximumOddSum, removeIdenticalLetters } from "./algorithms";
 import "./index.css";
+import "./fonts/fonts.css";
 
 const App = () => {
   const [cardNumber, setCardNumber] = useState("");

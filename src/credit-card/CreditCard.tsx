@@ -1,4 +1,3 @@
-import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import CreditCardForm from "./CreaditCardForm";
 import CreditCardImage from "./CreditCardImage";
 
@@ -9,7 +8,7 @@ type CreditCardProps = {
 
 const CreditCard = ({ cardNumber, cardHolder }: CreditCardProps) => {
   return (
-    <div className="creadit-card-component">
+    <div className="creadit-card-component d-flex flex-column align-items-center">
       <CreditCardImage />
       <div className="credit-card-form">
         <CreditCardForm />

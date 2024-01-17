@@ -24,36 +24,20 @@ body {
   border-radius: 15px;
   background-color: #4a90e2;
   color: white;
-  padding: 20px;
+  padding: 18px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-  font-family: Arial, sans-serif;
+  font-family: "Credit Card Front", sans-serif;
   position: relative;
 }
 
 .credit-card-card-logo {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
 }
 
-.credit-card-card-chip {
-  width: 40px;
-  height: 30px;
-  background-color: #333;
-  border-radius: 5px;
-  position: absolute;
-  top: 50px;
-  left: 20px;
-}
-
 .credit-card-card-number {
-  margin: 20px 0;
-  font-size: 20px;
+  font-size: 25px;
   letter-spacing: 3px;
-}
-
-.credit-card-card-details {
-  display: flex;
-  justify-content: space-between;
 }
 
 .credit-card-card-holder {
@@ -67,4 +51,12 @@ body {
 .credit-card-card-expiry span {
   display: block;
   font-size: 12px;
+}
+
+.credit-card-holder {
+  font-size: 12px;
+}
+
+.credit-card-card-expiry .date {
+  font-size: 16px;
 }
