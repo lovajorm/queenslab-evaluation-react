@@ -17,6 +17,20 @@ body {
   width: 100%;
 }
 
+/* Form */
+form {
+  width: 400px;
+}
+.form-select.month {
+  min-width: 100px;
+}
+.form-select.year {
+  min-width: 140px;
+}
+.form-group-cvv input {
+  max-width: 110px;
+}
+
 /* credit card */
 .credit-card-card {
   width: 350px;
@@ -67,29 +81,21 @@ body {
 
 @media (max-width: 576px) {
   .creadit-card-component {
-    min-width: 300px;
+    min-width: 320px;
     max-width: 100%;
-    padding: 0rem;
+    padding: 2rem 0;
   }
-  .creadit-card-form form {
-    width: 100%;
+  form {
+    width: 300px;
   }
-  input.form-control {
-    width: 100%;
+  .form-select.month {
+    min-width: 70px;
   }
-  /* .month .form-select {
-    max-width: 70px;
+  .form-select.year {
+    min-width: 110px;
   }
-  .year .form-select {
-    max-width: 90px;
-  } */
   .form-group-cvv input {
-    max-width: 80px;
-  }
-  .year {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+    max-width: 100px;
   }
   .credit-card-card {
     width: 300px;
@@ -128,4 +134,25 @@ body {
   .credit-card-card-expiry .date {
     font-size: 16px;
   }
+}
+
+/* Form */
+div.validation-error {
+  font-size: 0.8rem;
+  color: rgb(236, 4, 4);
+}
+
+input.validation-error {
+  color: rgb(236, 4, 4);
+  border-color: rgb(236, 4, 4);
+}
+
+input:invalid {
+  border: 1px solid rgb(236, 4, 4);
+}
+
+/* Animation */
+.animated-text {
+  transition: all 0.3s ease;
+  /* Fler stilar efter behov, t.ex. font-size, color etc. */
 }
