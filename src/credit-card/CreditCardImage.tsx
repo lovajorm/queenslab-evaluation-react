@@ -1,19 +1,19 @@
-import { useEffect } from "react";
-import { CreditCardFormData } from "./CreditCard";
+import { useEffect } from "react"
+import { CreditCardFormData } from "./CreditCard"
 
 type CreditCardProps = {
-  creditCardFormData: CreditCardFormData;
+  creditCardFormData: CreditCardFormData
   setCreditCardFormData: React.Dispatch<
     React.SetStateAction<CreditCardFormData>
-  >;
-};
+  >
+}
 const CreditCardImage = ({
   creditCardFormData,
   setCreditCardFormData,
 }: CreditCardProps) => {
   useEffect(() => {
-    setCreditCardFormData(creditCardFormData);
-  }, [creditCardFormData]);
+    setCreditCardFormData(creditCardFormData)
+  }, [creditCardFormData])
 
   return (
     <div className="credit-card-card m-3 d-flex flex-column justify-content-between">
@@ -43,7 +43,7 @@ const CreditCardImage = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CreditCardImage;
+export default CreditCardImage
