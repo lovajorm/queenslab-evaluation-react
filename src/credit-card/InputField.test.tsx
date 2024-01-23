@@ -6,12 +6,14 @@ describe("InputField Component", () => {
   it("renders InputField component with label", () => {
     render(
       <InputField
-        label="Test Label"
-        name="test"
-        type="text"
-        value=""
+        inputProps={{
+          label: "Test Label",
+          name: "test",
+          type: "text",
+          value: "",
+          onChange: () => {},
+        }}
         error=""
-        onChange={() => {}}
       />
     );
     const labelElement = screen.getByText("Test Label");
@@ -20,12 +22,14 @@ describe("InputField Component", () => {
   it("displays validation error message when there is an error", () => {
     render(
       <InputField
-        label="Test Label"
-        name="test"
-        type="text"
-        value=""
+        inputProps={{
+          label: "Test Label",
+          name: "test",
+          type: "text",
+          value: "",
+          onChange: () => {},
+        }}
         error="Error message"
-        onChange={() => {}}
       />
     );
     const errorElement = screen.getByText("Error message");
@@ -35,11 +39,13 @@ describe("InputField Component", () => {
     const handleChange = vi.fn();
     render(
       <InputField
-        label="CVV"
-        name="cvv"
-        type="text"
-        value=""
-        onChange={(e) => handleChange(e, "cvv")}
+        inputProps={{
+          label: "CVV",
+          name: "cvv",
+          type: "text",
+          value: "",
+          onChange: (e) => handleChange(e, "cvv"),
+        }}
         error=""
       />
     );
