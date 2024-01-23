@@ -1,38 +1,33 @@
-import { FormGroup, Input, Label } from "reactstrap"
+import { FormGroup, Input, Label } from "reactstrap";
 
 type InputProps = {
-  label: string
-  name: string
-  type: "text" | "number"
-  value: string
-  error: string
-  pattern?: string
-  maxlength?: string
-  onChange: React.ChangeEventHandler<HTMLInputElement>
-}
+  inputProps: {
+    label: string;
+    name: string;
+    type: "text" | "number";
+    value: string;
+    pattern?: string;
+    maxlength?: string;
+    onChange: React.ChangeEventHandler<HTMLInputElement>;
+  };
+  error: string;
+};
 
-const InputField = ({
-  label,
-  name,
-  type,
-  pattern,
-  value,
-  onChange,
-  error,
-}: InputProps) => {
+const InputField = ({ inputProps, error }: InputProps) => {
   return (
     <FormGroup>
-      <Label for={name}>{label}</Label>
+      <Label for={inputProps.name}>{inputProps.label}</Label>
       <Input
-        name={name}
-        type={type}
-        pattern={pattern}
-        value={value}
-        onChange={onChange}
+        id={inputProps.name}
+        name={inputProps.name}
+        type={inputProps.type}
+        pattern={inputProps.pattern}
+        value={inputProps.value}
+        onChange={inputProps.onChange}
         className={error && "validation-error"}
       />
       {error && <div className="validation-error">{error}</div>}
     </FormGroup>
-  )
-}
-export default InputField
+  );
+};
+export default InputField;

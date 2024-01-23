@@ -1,0 +1,159 @@
+/* CreditCard component */
+.creadit-card-component {
+  max-width: 500px;
+  min-width: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2rem;
+  border-radius: 5px;
+}
+@media (max-width: 576px) {
+  .creadit-card-component {
+    min-width: 320px;
+    max-width: 100%;
+    padding: 2rem 0;
+  }
+}
+
+/* Form component */
+form {
+  width: 400px;
+}
+.form-select.month {
+  min-width: 100px;
+}
+.form-select.year {
+  min-width: 140px;
+}
+.form-group-cvv input {
+  max-width: 110px;
+}
+
+div.validation-error {
+  font-size: 0.8rem;
+  color: rgb(236, 4, 4);
+}
+
+input.validation-error {
+  color: rgb(236, 4, 4);
+  border-color: rgb(236, 4, 4);
+}
+
+input:invalid {
+  border: 1px solid rgb(236, 4, 4);
+}
+
+.btn.btn-primary {
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  form {
+    width: 300px;
+  }
+
+  .form-select.month {
+    min-width: 70px;
+  }
+
+  .form-select.year {
+    min-width: 110px;
+  }
+
+  .form-group-cvv input {
+    max-width: 100px;
+  }
+}
+
+/* CreditCard Image */
+.credit-card-card {
+  width: 350px;
+  height: 200px;
+  border-radius: 15px;
+  background: linear-gradient(to left, #283593, #1976d2);
+  color: white;
+  padding: 1.1rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  font-family: "Credit Card Front", sans-serif;
+  position: relative;
+}
+
+.card-logo {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card-logo img {
+  height: 25px;
+}
+
+.card-chip img {
+  width: 42px;
+}
+
+.card-number {
+  font-size: 1.6rem;
+  letter-spacing: 3px;
+}
+
+.card-expiry {
+  text-align: right;
+}
+
+.card-expiry span {
+  display: block;
+  font-size: 0.7rem;
+}
+
+.card-holder {
+  font-size: 0.7rem;
+}
+
+.card-expiry .date {
+  font-size: 1rem;
+}
+
+.animated-text {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  .credit-card-card {
+    width: 300px;
+    height: 170px;
+    padding: 0.9rem;
+  }
+
+  .card-logo {
+    font-size: 1rem;
+  }
+
+  .card-logo img {
+    height: 22px;
+  }
+
+  .card-chip img {
+    width: 35px;
+  }
+
+  .card-number {
+    font-size: 1.5rem;
+  }
+
+  .card-details {
+    margin-top: 0.3rem;
+  }
+
+  .card-holder {
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+
+  .card-expiry .expires {
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+
+  .card-expiry .date {
+    font-size: 1rem;
+  }
+}

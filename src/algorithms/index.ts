@@ -1,4 +1,3 @@
-// I assume I will only remove letters if there are exactly 4 identical letters so I wont do anything if there is for ex 5
 const removeIdenticalLetters = (str: string): string => {
   let result = "";
 
@@ -19,26 +18,16 @@ const removeIdenticalLetters = (str: string): string => {
 };
 
 const maximumOddSum = (numbers: number[]): number => {
-  let oddSums = [];
-
-  numbers.sort(function (a, b) {
-    return b - a;
-  });
-  console.log(numbers);
-
+  let maxOdd = 0;
+  let maxEven = 1;
   for (let i = 0; i < numbers.length; i++) {
-    if (i === numbers.length - 1) {
-      if ((numbers[i] + numbers[0]) % 2 !== 0) {
-        oddSums.push(numbers[i] + numbers[0]);
-      }
+    if (numbers[i] % 2 === 0) {
+      maxEven = Math.max(maxEven, numbers[i]);
     } else {
-      if ((numbers[i] + numbers[i + 1]) % 2 !== 0) {
-        oddSums.push(numbers[i] + numbers[i + 1]);
-      }
+      maxOdd = Math.max(maxOdd, numbers[i]);
     }
   }
-  console.log(oddSums);
-  return Math.max(...oddSums);
+  return maxOdd + maxEven;
 };
 
 export { removeIdenticalLetters, maximumOddSum };

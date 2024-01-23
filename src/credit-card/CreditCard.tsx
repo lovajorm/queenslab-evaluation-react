@@ -1,20 +1,22 @@
-import { useState } from "react"
-import CreditCardForm from "./CreaditCardForm"
-import CreditCardImage from "./CreditCardImage"
+import { useState } from "react";
+import CreditCardForm from "./CreaditCardForm";
+import CreditCardImage from "./CreditCardImage";
+import "./creditCard.css";
+import "../fonts/fonts.css";
 
 export type CreditCardFormData = {
-  cardNumber: string
-  cardHolder: string
-  month: string
-  year: string
-  cvv: string
-}
+  cardNumber: string;
+  cardHolder: string;
+  month: string;
+  year: string;
+  cvv: string;
+};
 
 type Props = {
-  onSubmit: (data: CreditCardFormData) => void
-  error: string
-  successMessage: string
-}
+  onSubmit: (data: CreditCardFormData) => void;
+  error: string;
+  successMessage: string;
+};
 
 const CreditCard = ({ onSubmit, error, successMessage }: Props) => {
   const [creditCardFormData, setCreditCardFormData] =
@@ -24,13 +26,13 @@ const CreditCard = ({ onSubmit, error, successMessage }: Props) => {
       month: "1",
       year: new Date().getFullYear().toString(),
       cvv: "",
-    })
+    });
 
-  const monthsSelectOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-  let yearsSelectOptions = []
-  const currentYear = new Date().getFullYear()
+  const monthsSelectOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  let yearsSelectOptions = [];
+  const currentYear = new Date().getFullYear();
   for (let i = 0; i <= 10; i++) {
-    yearsSelectOptions.push(currentYear + i)
+    yearsSelectOptions.push(currentYear + i);
   }
 
   return (
@@ -51,7 +53,7 @@ const CreditCard = ({ onSubmit, error, successMessage }: Props) => {
         />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CreditCard
+export default CreditCard;
